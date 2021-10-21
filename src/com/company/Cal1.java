@@ -5,7 +5,7 @@ public class Cal1 {
 
         int res = 0;
 
-        if(str.matches("^[0-9]*+,*+[0-9]*$") == false){ //
+        if(str.matches("^([0-9]*+,*)*$") == false){
             System.out.println("Ваш ввод был неправельным ");
         }else{
             String[] value = str.split(","); //разделяем строку по ","
