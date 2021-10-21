@@ -4,8 +4,9 @@ public class Cal1 {
     public static void Add(String str){
 
         int res = 0;
+        str = str.replaceAll("\\\\n",",");
 
-        if(str.matches("^([0-9]*+,*)*$") == false){
+        if(str.matches("^([0-9]*+,*)*$") == false){ //
             System.out.println("Ваш ввод был неправельным ");
         }else{
             String[] value = str.split(","); //разделяем строку по ","
