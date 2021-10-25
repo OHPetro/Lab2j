@@ -15,9 +15,15 @@ public class Cal1 {
         }else{
             String[] value = str.split("\\W"); //разделяем строку по ","
             for(int i=0;i<value.length;i++){
+
                 int strtoint = 0;
                 try{
                     strtoint = Integer.parseInt(value[i]);  //делает из типа стр тип инт
+
+                    if(strtoint>1000){
+                        strtoint = 0;
+                    }
+
                     res+=strtoint;
                 }catch (NumberFormatException e){
                 }
